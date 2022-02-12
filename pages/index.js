@@ -2,13 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {PostCard, PostWidget,Categories} from '../components'
+import {getPosts} from '../services'
 
 const posts = [
   {title: "React fake", brif: "somthing about articles"},
   {title: "React real", brif: "somthing new articles"},
 ];
 
-export default function Home() {
+export default function Home({posts}) {
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
@@ -30,4 +31,13 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+// Fetch data at a build time 
+
+export async function getStaticProps(){
+  const posts = (await getPosts()) || [];
+  return {
+    props: {posts},
+  }
 }

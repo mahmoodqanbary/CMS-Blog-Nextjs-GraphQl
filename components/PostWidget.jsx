@@ -17,8 +17,8 @@ const PostWidget = ({ categories, slug }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
-      <h3 className="bg-white mb-8 font-semibold border-b pb-4">
-        {slug ? "Related Posts" : "Recent Posts"}
+      <h3 className="bg-white mb-8 font-semibold border-b pb-4 text-right">
+        {slug ? "مطالب مرتبط" : "مطالب حدید"}
       </h3>
       {relatedPosts.map((post)=> (
         <div key={post.title} className="flex items-center w-full mb-4">

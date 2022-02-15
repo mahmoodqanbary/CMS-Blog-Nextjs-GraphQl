@@ -1,4 +1,4 @@
-import { request, gql } from "graphql-request";
+import { request, gql, rawRequest } from "graphql-request";
 
 import React from "react";
 
@@ -82,4 +82,17 @@ export const getSimilarPosts = async () => {
 
   const result = await request(graphqlAPI, query);
   return result.posts;
+};
+
+export const getCategories = async () => {
+  const query = gql`
+    query GetCategories {
+      categories {
+        name
+        slug
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.getCategories;
 };

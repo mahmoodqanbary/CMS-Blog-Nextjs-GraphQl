@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 const categories = [
-  { name: "React", slug: "react" },
-  { name: "Web Development", slug: "web-dev" },
+  { name: "سايت در حال تکمیل- نکست جی اس - ساخته شده توسط محمود قنبری" },
+ 
 ];
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
         <div className="md:float-left block">
           <Link href="/">
             <span className="cursor-pointer font-bold text-4xl text-white">
-              GraphCMS
+              نکست بلاگ 
             </span>
           </Link>
         </div>

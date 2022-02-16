@@ -1,5 +1,6 @@
 import React from "react";
-import moment from "moment";
+
+import moment from 'jalali-moment'
 import Link from "next/link";
 
 const PostCard = ({ post }) => {
@@ -47,7 +48,7 @@ const PostCard = ({ post }) => {
             />
           </svg>
           <span className="align-middle">
-            {moment(post.createdAt).format("MMM DD, YYYY")}
+            {moment(post.createdAt).locale('fa').format('YYYY/MM/DD')}
           </span>
         </div>
       </div>

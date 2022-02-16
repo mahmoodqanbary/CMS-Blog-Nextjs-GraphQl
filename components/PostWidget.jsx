@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment from 'jalali-moment'
 import React from "react";
 import { useState, useEffect } from "react";
 import { getRecentPosts, getSimilarPosts } from "../services";
@@ -33,7 +33,7 @@ const PostWidget = ({ categories, slug }) => {
           </div>
           <div className="flex-grow ml-4">
           <p className="text-gray-500 text-xs ">
-            {moment(post.createdAt).format('MMM DD,YYYY') }
+            {moment(post.createdAt).locale('fa').format('YYYY/MM/DD') }
           </p>
           <Link href={`/post/${post.slug}`} key={post.title} > 
             <p className="text-md">

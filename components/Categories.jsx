@@ -18,7 +18,7 @@ const Categories = () => {
       </h3>
       {categories.map((category) => (
         <Link href={`/category/${category.slug}`} key={category.slug}>
-          <span className="cursor-pointer block pb-3 mb-3">{category.name}</span>
+          <span className="cursor-pointer block pb-3 mb-3 text-right">{category.name}</span>
         </Link>
       ))}
     </div>
